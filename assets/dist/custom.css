@@ -10,7 +10,7 @@ body{
 section{
 	padding: 40px 0;
 }
-a{
+a,a:hover{
 	text-decoration: none;
 }
 .jeg_saeed_logo{
@@ -143,4 +143,32 @@ header .navbar-default .navbar-nav > li > a{
 }
 .singlecontent{
 	width:90%;
+}
+.saeedheader{
+	background-image: url(image/header.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+.saeedfooter .jeg_footer_content{
+	background: url(image/header.jpg) !important;
+	background-size: cover !important;
+	background-position: bottom !important;
+}
+
+@media only screen and (max-width: 600px) {
+	.orderbazi{
+		display: flex;
+		flex-flow: column;
+	}
+	.orderbazi .col-md-4{
+		order:2;
+	}
+	.orderbazi .col-md-8{
+		order:1;
+	}
+}
+
+.jeg_postblock .jeg_post_title a:hover, .jeg_sidefeed .jeg_pl_xs_3 .jeg_post_title a:hover, .widget_jnews_popular .jeg_post_title a:hover{
+	color:#0094bb;
+	text-decoration: none;
 }
