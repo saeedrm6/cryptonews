@@ -7216,13 +7216,13 @@ body.jeg_show_menu {
     width: 60%;
     height: 100%;
     top: 0;
-    left: 0;
+    /*left: 0;*/
 }
 .jeg_heroblock_5 .jeg_hero_item_2, .jeg_heroblock_5 .jeg_hero_item_3 {
     width: 40%;
     height: 50%;
     top: 0;
-    left: 60%;
+    /*left: 60%;*/
 }
 .jeg_heroblock_5 .jeg_hero_item_3 {
     top: 50%;

@@ -26,6 +26,12 @@ a,a:hover{
 	background: #0094bb;
 	color: #fff;
 }
+.text-white{
+	color: #e5e5e5;
+}
+.text-black{
+	color: #111;
+}
 .sazemanibg{
 	background: #0094bb !important;
 }
@@ -171,4 +177,10 @@ header .navbar-default .navbar-nav > li > a{
 .jeg_postblock .jeg_post_title a:hover, .jeg_sidefeed .jeg_pl_xs_3 .jeg_post_title a:hover, .widget_jnews_popular .jeg_post_title a:hover{
 	color:#0094bb;
 	text-decoration: none;
+}
+.categoryinner .jeg_heroblock_5 .jeg_hero_item_1{
+	right:0;
+}
+.categoryinner .jeg_heroblock_5 .jeg_hero_item_2, .jeg_heroblock_5 .jeg_hero_item_3{
+	right: 60%;
 }
