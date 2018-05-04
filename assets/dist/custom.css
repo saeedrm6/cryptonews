@@ -1,0 +1,146 @@
+@font-face{
+	font-family: shabnam;
+	src: url(font/shabnam-light.woff) format("woff");
+}
+
+body{
+	font-family: shabnam;
+	background-color: #f5f5f5;
+}
+section{
+	padding: 40px 0;
+}
+a{
+	text-decoration: none;
+}
+.jeg_saeed_logo{
+	padding: 45px 0px !important;
+}
+.uptext{
+	color: #3abc98;
+}
+.gold{
+	color: #fabf2c;
+}
+::selection{
+	background: #0094bb;
+	color: #fff;
+}
+.sazemanibg{
+	background: #0094bb !important;
+}
+.sazemanicolor{
+	color: #0094bb !important;
+}
+#slider .jeg_heroblock .jeg_post_title{
+	font-size: 16px;
+	line-height: 1.4em;
+	direction: rtl;
+}
+.rtl{
+	direction: rtl;
+}
+
+header .navbar{
+	margin-bottom: 0px;
+}
+
+header .navbar-default{
+	background-color: #212121;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 0px;
+}
+
+header .navbar-nav > li{
+	float: right;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	color: #f5f5f5;
+    background-color: #0094bb;
+}
+header .navbar-default .navbar-nav > li > a{
+	color: #f5f5f5;
+}
+@media only screen and (max-width: 600px) {
+    header .navbar-nav > li{
+		float: none;
+		text-align: center;
+	}
+}
+#slider .jeg_heroblock{
+	margin-bottom: 0px;
+}
+.jeg_block_title{
+	float: right;
+}
+.jeg_block_heading_7 .jeg_block_title span{
+	border-bottom: 2px solid #0094bb;
+}
+
+#editorchoice .jeg_pl_sm .jeg_thumb{
+	float: right;
+}
+#editorchoice .jeg_pl_sm .jeg_postblock_content {
+    margin-right: 120px;
+    padding-right: 15px;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: right;
+    direction: rtl;
+}
+
+.contentinnner p{
+	font-size: 14px;
+    line-height: 1.6;
+    margin-top: 1em;
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+.contentinnner{
+	background: #fff;
+}
+.btn{
+	height: auto !important;
+}
+.bgblack{
+	background: #111;
+}
+#homeads{
+	padding: 0px;
+}
+#homeads .jeg_ad_module{
+	margin-bottom: 0px;
+}
+#editorchoice .jeg_heroblock{
+	margin-bottom: 0px;
+}
+#homelatestposts{
+	direction: rtl;
+}
+#homelatestposts .jeg_postblock_15 .jeg_posts{
+	float: right;
+}
+.entry-content blockquote, .entry-content q{
+	border-left-width: 0;
+	border-right-width: 4px;
+	border-color: #81cadd;
+}
+.signleinner .content-inner p{
+	text-align: justify;
+}
+.jeg_post_tags a:hover{
+	background-color: #0094bb;
+	text-decoration: none;
+}
+.jeg_author_image{
+	float: right;
+}
+.jeg_author_content{
+	margin-left: 0;
+}
+.singlecontent{
+	width:90%;
+}
