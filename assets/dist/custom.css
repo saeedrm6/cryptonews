@@ -199,3 +199,6 @@ header .navbar-default .navbar-nav > li > a{
 	margin-right: 30px;
 	margin-left: 0;
 }
+.jeg_archive_search .jeg_search_button, .search_review_button{
+	left:0;
+}
