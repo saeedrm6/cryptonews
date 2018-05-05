@@ -184,3 +184,12 @@ header .navbar-default .navbar-nav > li > a{
 .categoryinner .jeg_heroblock_5 .jeg_hero_item_2, .jeg_heroblock_5 .jeg_hero_item_3{
 	right: 60%;
 }
+.jeg_meta_author a{
+	color: #333;
+}
+.jeg_cat_header_1{
+	padding:15px;
+}
+.ltr{
+	direction: ltr;
+}
