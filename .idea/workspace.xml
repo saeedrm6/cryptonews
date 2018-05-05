@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e5f05fb-389a-4c7a-ace6-445b28bd6de5" name="Default" comment="" />
+    <list default="true" id="7e5f05fb-389a-4c7a-ace6-445b28bd6de5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tag.html" />
+    </list>
     <ignored path="crypto.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -70,12 +72,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archive.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="archive.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/archive.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
               <caret line="371" column="73" lean-forward="false" selection-start-line="371" selection-start-column="73" selection-end-line="371" selection-end-column="73" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tag.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="371" column="74" lean-forward="false" selection-start-line="371" selection-start-column="74" selection-end-line="371" selection-end-column="74" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,6 +157,7 @@
     <findStrings>
       <find>ltr</find>
       <find>jeg_ad jnews_above_footer_ads</find>
+      <find>&lt;form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,6 +176,7 @@
         <option value="$PROJECT_DIR$/search.html" />
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/archive.html" />
+        <option value="$PROJECT_DIR$/tag.html" />
       </list>
     </option>
   </component>
@@ -301,12 +317,12 @@
       <workItem from="1525438544368" duration="3569000" />
       <workItem from="1525457706501" duration="3752000" />
       <workItem from="1525514199823" duration="776000" />
-      <workItem from="1525525468607" duration="9247000" />
+      <workItem from="1525525468607" duration="9557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26116000" />
+    <option name="totallyTimeSpent" value="26426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="27" width="1401" height="873" extended-state="0" />
@@ -732,6 +748,16 @@
         <state relative-caret-position="183">
           <caret line="371" column="73" lean-forward="false" selection-start-line="371" selection-start-column="73" selection-end-line="371" selection-end-column="73" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="371" column="74" lean-forward="false" selection-start-line="371" selection-start-column="74" selection-end-line="371" selection-end-column="74" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
