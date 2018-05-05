@@ -193,3 +193,9 @@ header .navbar-default .navbar-nav > li > a{
 .ltr{
 	direction: ltr;
 }
+.jeg_authorpage .jeg_author_content{
+	padding-right: 110px;
+	padding-left: 0;
+	margin-right: 30px;
+	margin-left: 0;
+}
