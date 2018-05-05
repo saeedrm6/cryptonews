@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e5f05fb-389a-4c7a-ace6-445b28bd6de5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/dist/custom.css" afterPath="$PROJECT_DIR$/assets/dist/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/dist/frontend.min.css" afterPath="$PROJECT_DIR$/assets/dist/frontend.min.css" />
-    </list>
+    <list default="true" id="7e5f05fb-389a-4c7a-ace6-445b28bd6de5" name="Default" comment="" />
     <ignored path="crypto.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -57,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="404.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/404.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
@@ -71,6 +66,16 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="archive.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/archive.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="371" column="73" lean-forward="false" selection-start-line="371" selection-start-column="73" selection-end-line="371" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,6 +142,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ltr</find>
+      <find>jeg_ad jnews_above_footer_ads</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,6 +160,7 @@
         <option value="$PROJECT_DIR$/assets/dist/custom.css" />
         <option value="$PROJECT_DIR$/search.html" />
         <option value="$PROJECT_DIR$/404.html" />
+        <option value="$PROJECT_DIR$/archive.html" />
       </list>
     </option>
   </component>
@@ -294,12 +301,12 @@
       <workItem from="1525438544368" duration="3569000" />
       <workItem from="1525457706501" duration="3752000" />
       <workItem from="1525514199823" duration="776000" />
-      <workItem from="1525525468607" duration="7985000" />
+      <workItem from="1525525468607" duration="9247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24854000" />
+    <option name="totallyTimeSpent" value="26116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="27" width="1401" height="873" extended-state="0" />
@@ -717,6 +724,14 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="371" column="73" lean-forward="false" selection-start-line="371" selection-start-column="73" selection-end-line="371" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
