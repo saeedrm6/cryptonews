@@ -202,3 +202,17 @@ header .navbar-default .navbar-nav > li > a{
 .jeg_archive_search .jeg_search_button, .search_review_button{
 	left:0;
 }
+
+.downprice{
+	color:#ff7171;
+}
+
+.jeg_author_content strong{
+	color : #111;
+}
+.allpnav li{
+	padding:10px 0;
+}
+.sircolor{
+	color: #3a8f9e;
+}

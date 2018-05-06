@@ -143,70 +143,50 @@
 
 </header>
 <div class="clearfix"></div>
-<div class="jeg_main " style="transform: none;">
-    <div class="jeg_container" style="transform: none;">
-        <div class="jeg_content" style="transform: none;">
-            <div class="jeg_section" style="transform: none;">
-                <div class="container" style="transform: none;">
-                    <div class="jeg_ad jeg_archive jnews_archive_above_content_ads">
-                        <div class="ads-wrapper "></div>
-                    </div>
-                    <div class="jeg_cat_content row rtl">
-                        <div class="jeg_sidebar jeg_sticky_sidebar col-md-4">
-                            <div class="jegStickyHolder">
+<section>
+    <div class="jeg_main " style="transform: none;">
+        <div class="jeg_container" style="transform: none;">
+            <div class="jeg_content" style="transform: none;">
+                <div class="jeg_section" style="transform: none;">
+                    <div class="container" style="transform: none;">
+                        <div class="jeg_ad jeg_archive jnews_archive_above_content_ads">
+                            <div class="ads-wrapper "></div>
+                        </div>
+                        <div class="jeg_archive_header jeg_authorpage clearfix">
 
+                            <div class="jeg_author_wrap vcard">
 
-                                <div class="theiaStickySidebar">
-                                    <div class="widget widget_jnews_module_element_ads"
-                                         id="jnews_module_element_ads-1">
-                                        <div class="jeg_ad jeg_ad_module jnews_module_21_2_5ad1ebbe1b41d ">
-                                            <div class="ads-wrapper">
-                                                <a href="http://bit.ly/jnewsio" target="_blank" class="adlink ">
-                                                    <img src="assets/dist/image/sidebarad.jpg"
-                                                         alt="" data-pin-no-hover="true">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="jeg_author_content rtl">
+                                    <h3 class="jeg_author_name fn text-center sazemanicolor"> قیمت لحظه ای ارزهای دیجیتال</h3>
+                                    <br>
+                                        <ul class="nav col-md-6 allpnav">
+                                            <li><strong>ارزهای فعال در مارکت :</strong>&nbsp;<b class="sircolor" id="active_currencies"></b></li>
+                                            <li><strong>توکن های فعال در مارکت :</strong>&nbsp;<b class="sircolor" id="active_assets"></b></li>
+                                            <li><strong>بازارهای فعال :</strong>&nbsp;<b class="sircolor" id="active_markets"></b></li>
+                                        </ul>
+                                        <ul class="nav col-md-6 allpnav">
+                                            <li><strong>حجم کل بازار :</strong>&nbsp;<b class="sircolor" id="total_market_cap_usd"> </b></li>
+                                            <li><strong>حجم معاملات 24 ساعت اخیر :</strong>&nbsp;<b class="sircolor" id="total_24h_volume_usd"> </b></li>
+                                            <li><strong>سهم بیت کوین از کل بازار :</strong>&nbsp;<b class="sircolor" id="bitcoin_percentage_of_market_cap"></b></li>
+                                        </ul>
 
+                                        <div class="clearfix"></div>
+
+                                    <br>
 
                                 </div>
-
-
                             </div>
                         </div>
-                        <div class="jeg_main_content col-sm-8">
-                            <div class="jeg_archive_header">
-                                <div class="jeg_breadcrumbs jeg_breadcrumb_container">
 
-                                </div>
-                                <h1 class="jeg_archive_title">صفحه مورد نظر یافت نشد!</h1>
-                                <p>متاسفانه صفحه مورد نظر شما یافت نشد. از نتایج جستجو در مورد مطلب مورد نظرتان استفاده نمایید.</p>
-                                <div class="jeg_archive_search ltr">
-                                    <form action="https://jnews.io/cryptonews/" method="get" class="jeg_search_form" target="_top">
-                                        <input name="s" class="jeg_search_input rtl" placeholder="جستجو..." value="عبارت مورد جستجو" autocomplete="off" type="text">
-                                        <button type="submit" class="jeg_search_button btn sazemanibg">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </form>
-                                    <div class="jeg_search_result jeg_search_hide with_result">
-                                        <div class="search-result-wrapper"></div>
-                                        <div class="search-link search-noresult"> No Result </div>
-                                        <div class="search-link search-all-button">
-                                            <i class="fa fa-search"></i> View All Result
-                                        </div>
-                                    </div>
-                                </div>
-                                <a onclick="loadDoc();" class="btn btn-danger"></a>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="jeg_ad jnews_above_footer_ads">
+                <div class="ads-wrapper "></div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 <footer class="saeedfooter">
     <div class="footer-holder" id="footer" data-id="footer">
         <div class="jeg_footer jeg_footer_1 dark">
@@ -328,7 +308,6 @@
     </div>
 </footer>
 
-
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script type="text/script" src="assets/dist/frontend.min.js"></script>
@@ -336,7 +315,7 @@
 
 <script>
     function format(n, currency) {
-        return currency + " " + n.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        return  n.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")+ " " +currency;
     }
 
     function loadDoc() {
@@ -405,6 +384,27 @@
         xhttp.open("GET", "https://api.cointrend.club/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP&tsyms=USD", true);
         xhttp.send();
     }, 500);
+
+    window.onload = function() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var data = JSON.parse(this.responseText);
+
+                document.getElementById("bitcoin_percentage_of_market_cap").innerHTML = format(data.bitcoin_percentage_of_market_cap,"درصد");
+                document.getElementById("active_assets").innerHTML = data.active_assets;
+                document.getElementById("active_markets").innerHTML = data.active_markets;
+                document.getElementById("active_currencies").innerHTML = data.active_currencies;
+                document.getElementById("total_24h_volume_usd").innerHTML = format(data.total_24h_volume_usd,"دلار").replace(".0","");
+                document.getElementById("total_market_cap_usd").innerHTML = format(data.total_market_cap_usd,"دلار").replace(".0","");
+
+                console.log();
+
+            }
+        };
+        xhttp.open("GET", "https://api.coinmarketcap.com/v1/global/", true);
+        xhttp.send();
+    };
 
 
 </script>
