@@ -51,18 +51,31 @@
                 <div class="col-md-9 col-xs-0 hidden-xs">
                     <div class="col-md-3">
                         <span class="gold">BTC</span><br>
-                        $9,080<br>
-                        <span class="uptext">+1.77%</span>
+                        <span>
+                            <span id="BTCprice"></span><span class="pull-left">تومان</span>
+                        </span><br>
+                        <strong class="uptextt" id="BTCchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">ETH</span><br>
-                        $9,080<br>
-                        <span class="uptext">+1.77%</span>
+                        <span>
+                            <span id="ETHprice"></span><span class="pull-left">تومان</span>
+                        </span><br>
+                        <strong class="uptextt" id="ETHchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">LTC</span><br>
-                        $9,080<br>
-                        <span class="uptext">+1.77%</span>
+                        <span>
+                            <span id="LTCprice"></span><span class="pull-left">تومان</span>
+                        </span><br>
+                        <strong class="uptextt" id="LTCchanges">+1.77%</strong>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="gold">XRP</span><br>
+                        <span>
+                            <span id="XRPprice"></span><span class="pull-left">تومان</span>
+                        </span><br>
+                        <strong class="uptextt" id="XRPchanges">+1.77%</strong>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -184,6 +197,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <a onclick="loadDoc();" class="btn btn-danger"></a>
                             </div>
 
                         </div>
@@ -319,6 +333,81 @@
 <script src="assets/js/bootstrap.js"></script>
 <script type="text/script" src="assets/dist/frontend.min.js"></script>
 <script type="text/script" src="assets/js/main.js"></script>
+
+<script>
+    function format(n, currency) {
+        return currency + " " + n.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+    }
+
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var data = JSON.parse(this.responseText);
+//                console.log(data);
+                console.log(data.RAW.BTC.USD.CHANGEPCT24HOUR);
+
+//                console.log(format(data.RAW.BTC.USD.PRICE*6900,"تومان").replace(".0",""));
+                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
+                if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
+                    document.getElementById("BTCchanges").classList.add('text-danger');
+                }else{
+                    document.getElementById("BTCchanges").classList.add('uptext');
+                }
+            }
+        };
+        xhttp.open("GET", "https://api.cointrend.club/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP&tsyms=USD", true);
+        xhttp.send();
+    }
+
+
+
+    window.setInterval(function(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var data = JSON.parse(this.responseText);
+
+                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
+                if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
+                    document.getElementById("BTCchanges").classList.add('text-danger');
+                }else{
+                    document.getElementById("BTCchanges").classList.add('uptext');
+                }
+
+                document.getElementById("ETHprice").innerHTML = format(data.RAW.ETH.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("ETHchanges").innerHTML = data.RAW.ETH.USD.CHANGEPCT24HOUR;
+                if (data.RAW.ETH.USD.CHANGEPCT24HOUR<0){
+                    document.getElementById("ETHchanges").classList.add('text-danger');
+                }else{
+                    document.getElementById("ETHchanges").classList.add('uptext');
+                }
+
+                document.getElementById("LTCprice").innerHTML = format(data.RAW.LTC.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("LTCchanges").innerHTML = data.RAW.LTC.USD.CHANGEPCT24HOUR;
+                if (data.RAW.LTC.USD.CHANGEPCT24HOUR<0){
+                    document.getElementById("LTCchanges").classList.add('text-danger');
+                }else{
+                    document.getElementById("LTCchanges").classList.add('uptext');
+                }
+
+                document.getElementById("XRPprice").innerHTML = format(data.RAW.XRP.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("XRPchanges").innerHTML = data.RAW.XRP.USD.CHANGEPCT24HOUR;
+                if (data.RAW.XRP.USD.CHANGEPCT24HOUR<0){
+                    document.getElementById("XRPchanges").classList.add('text-danger');
+                }else{
+                    document.getElementById("XRPchanges").classList.add('uptext');
+                }
+            }
+        };
+        xhttp.open("GET", "https://api.cointrend.club/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP&tsyms=USD", true);
+        xhttp.send();
+    }, 500);
+
+
+</script>
 
 
 </body>
