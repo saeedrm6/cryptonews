@@ -458,8 +458,19 @@
                     html += '<td id="price'+i+'"></td>';
                     html += '</tr>';
                 }
+                html += '<tr>';
+                    html += '<td>'+49+'</td>';
+                    html += '<td id="symb49"></td>';
+                    html += '<td id="marketcap49"></td>';
+                    html += '<td id="price49"></td>';
+                    html += '<td id="volume49"></td>';
+                    html += '<td id="circulatingSupply49" class="ltr"></td>';
+                    html += '<td id="changes49" class="ltr text-center"></td>';
+                    html += '<td id="graph49"></td>';
+                html += '</tr>';
                 document.getElementById("tableprices").innerHTML = html;
                 inalizimage();
+                tete();
             }
         };
         datas.open("GET", "https://api.coinmarketcap.com/v1/ticker/", true);
@@ -487,7 +498,25 @@
         datas2.send();
     }
 
-
+    function tete() {
+        $(document).ready(function(){
+            $.getJSON('https://cdn.api.coinranking.com/v1/public/coin/3460/?base=USD', function(data) {
+                document.getElementById("symb49").innerHTML= '<span style="display: inline;">'+data["data"]["coin"]["name"]+'</span>'+' <img class="img-responsive" style="display: inline-block;" src="https://s2.coinmarketcap.com/static/img/coins/16x16/2571.png" >';
+                document.getElementById("marketcap49").innerHTML= format(data["data"]["coin"]["marketCap"],"دلار");
+                document.getElementById("price49").innerHTML = data["data"]["coin"]["price"] + ' دلار';
+                document.getElementById("volume49").innerHTML = format(data["data"]["coin"]["volume"],"دلار");
+                document.getElementById("circulatingSupply49").innerHTML = format(data["data"]["coin"]["circulatingSupply"],"GRFT");
+                document.getElementById("changes49").innerHTML = data["data"]["coin"]["change"];
+                if (data["data"]["coin"]["change"]<0){
+                    document.getElementById("changes49").classList.add("text-danger");
+                }else{
+                    document.getElementById("changes49").classList.add("text-success");
+                }
+                document.getElementById("graph49").innerHTML = '<img style="border: 1px solid;" class="img-responsive" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/2571.png">';
+                console.log(data["data"]["coin"]);
+            });
+        });
+    }
 
 </script>
 
