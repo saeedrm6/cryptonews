@@ -216,3 +216,12 @@ header .navbar-default .navbar-nav > li > a{
 .sircolor{
 	color: #3a8f9e;
 }
+.showdetail{
+	background-color: #1c2f43;
+	background: -webkit-gradient(linear,left top,right top,from(#001c3a),to(#002650));
+	background: -webkit-linear-gradient(left,#001c3a,#002650);
+	background: -o-linear-gradient(left,#001c3a 0,#002650 100%);
+	background: linear-gradient(90deg,#001c3a 0,#002650);
+
+	min-height:500px;
+}
