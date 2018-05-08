@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e5f05fb-389a-4c7a-ace6-445b28bd6de5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detail.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allcrypto.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/dist/custom.css" afterPath="$PROJECT_DIR$/assets/dist/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allcrypto.html" afterPath="$PROJECT_DIR$/allcrypto.html" />
     </list>
     <ignored path="crypto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/404.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="412" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="413" selection-end-column="7" />
+            <state relative-caret-position="822">
+              <caret line="391" column="22" lean-forward="true" selection-start-line="391" selection-start-column="22" selection-end-line="391" selection-end-column="22" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -44,6 +42,20 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allcrypto.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/allcrypto.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="477" column="147" lean-forward="false" selection-start-line="477" selection-start-column="147" selection-end-line="477" selection-end-column="147" />
+              <folding>
+                <marker date="1525757477035" expanded="true" signature="26205:26223" ph="..." />
+                <marker date="1525757477035" expanded="true" signature="26493:26509" ph="..." />
+                <marker date="1525757477035" expanded="true" signature="26576:26598" ph="..." />
               </folding>
             </state>
           </provider>
@@ -90,19 +102,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allcrypto.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/allcrypto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="494" column="7" lean-forward="false" selection-start-line="494" selection-start-column="7" selection-end-line="494" selection-end-column="7" />
-              <folding>
-                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1525704526788" expanded="true" signature="26167:26185" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -142,8 +141,8 @@
         <option value="$PROJECT_DIR$/Spline Chart(1).html" />
         <option value="$PROJECT_DIR$/detail.html" />
         <option value="$PROJECT_DIR$/assets/dist/custom.css" />
-        <option value="$PROJECT_DIR$/allcrypto.html" />
         <option value="$PROJECT_DIR$/allcrypto.php" />
+        <option value="$PROJECT_DIR$/allcrypto.html" />
       </list>
     </option>
   </component>
@@ -157,7 +156,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="581" />
     <option name="y" value="209" />
     <option name="width" value="671" />
@@ -178,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,12 +189,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FastClickFeeder" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -289,17 +288,18 @@
       <workItem from="1525688227411" duration="12000" />
       <workItem from="1525690370836" duration="4325000" />
       <workItem from="1525704521081" duration="12000" />
+      <workItem from="1525756615551" duration="983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44222000" />
+    <option name="totallyTimeSpent" value="45205000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="25" width="1401" height="875" extended-state="7" />
+    <frame x="39" y="25" width="1401" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2885609" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29298893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -790,11 +790,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/allcrypto.html" />
     <entry file="file://$PROJECT_DIR$/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="412" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="413" selection-end-column="7" />
+        <state relative-caret-position="822">
+          <caret line="391" column="22" lean-forward="true" selection-start-line="391" selection-start-column="22" selection-end-line="391" selection-end-column="22" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -842,13 +841,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/allcrypto.php">
+    <entry file="file://$PROJECT_DIR$/allcrypto.php" />
+    <entry file="file://$PROJECT_DIR$/allcrypto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="494" column="7" lean-forward="false" selection-start-line="494" selection-start-column="7" selection-end-line="494" selection-end-column="7" />
+        <state relative-caret-position="339">
+          <caret line="477" column="147" lean-forward="false" selection-start-line="477" selection-start-column="147" selection-end-line="477" selection-end-column="147" />
           <folding>
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1525704526788" expanded="true" signature="26167:26185" ph="..." />
+            <marker date="1525757477035" expanded="true" signature="26205:26223" ph="..." />
+            <marker date="1525757477035" expanded="true" signature="26493:26509" ph="..." />
+            <marker date="1525757477035" expanded="true" signature="26576:26598" ph="..." />
           </folding>
         </state>
       </provider>

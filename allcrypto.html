@@ -188,7 +188,7 @@
                                         <td>حجم معاملات 24 ساعت اخیر</td>
                                         <td>عرضه شده</td>
                                         <td>تغییرات 24 ساعت اخیر</td>
-                                        <td>نمودار تغییرات 24 ساعت اخیر</td>
+                                        <td>نمودار تغییرات 7 روز اخیر</td>
                                     </tr>
                                     </thead>
                                     <tbody id="tableprices">
@@ -444,11 +444,11 @@
                     var counter = i+1;
                     html += '<tr>';
                     html += '<td>'+counter+'</td>';
-                    html += '<td>'+data[i].name+'</td>';
+                    html += '<td id="symb'+i+'">'+data[i].name+'</td>';
                     html += '<td>'+data[i].market_cap_usd+' دلار</td>';
                     html += '<td>'+data[i].price_usd+' دلار</td>';
                     html += '<td>'+data[i]["24h_volume_usd"]+' دلار</td>';
-                    html += '<td>'+'BTC '+data[i].available_supply+'</td>';
+                    html += '<td class="ltr">'+data[i].available_supply+' '+data[i].symbol +'</td>';
                     if(data[i].percent_change_24h<0){
                         var classs = "text-danger";
                     }else{
@@ -475,9 +475,10 @@
             if (datas2.readyState ==4 && datas2.status == 200){
                 var data = JSON.parse(datas2.responseText);
                 for (var i=0; i<48; i++){
-                    var html = '<img style="border: 1px solid;" class="img-responsive" src="https://s2.coinmarketcap.com/generated/sparklines/web/1d/usd/'+data[i]["id"]+'.png">';
+                    var html = '<img style="border: 1px solid;" class="img-responsive" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/'+data[i]["id"]+'.png">';
                     document.getElementById("price"+i).innerHTML = html;
-                    console.log(data[i]["id"]);
+                    document.getElementById("symb"+i).innerHTML = '<span style="display: inline;">'+data[i]["name"]+'</span>'+' <img class="img-responsive" style="display: inline-block;" src="https://s2.coinmarketcap.com/static/img/coins/16x16/'+data[i]["id"]+'.png" >';
+//                    console.log(data[i]["id"]);
                 }
             }
 
