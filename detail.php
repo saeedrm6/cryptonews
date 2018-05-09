@@ -152,6 +152,31 @@
 </header>
 <div class="clearfix"></div>
 <section class="showdetail">
+    <script>
+
+
+        function timeConverter(UNIX_timestamp){
+            var a = new Date(UNIX_timestamp);
+            var year = a.getFullYear();
+            var month = a.getMonth();
+            var date = a.getDate();
+            var hour = a.getHours();
+            var min = a.getMinutes();
+            var sec = a.getSeconds();
+            var time = year + '-'+ date + '-' + month;
+            return time;
+        }
+
+//        console.log(timeConverter(1367174841000));
+    </script>
+    <?php
+
+//    $data = file_get_contents("https://graphs2.coinmarketcap.com/currencies/bitcoin/");
+//    echo '<pre>';
+//
+//    echo '</pre>';
+//    die();
+    ?>
     <div id="chartdiv"></div>
 </section>
 <footer class="saeedfooter">
@@ -381,7 +406,7 @@
         "mouseWheelZoomEnabled": true,
         "graphs": [{
             "id": "g1",
-            "balloonText": "[[value]]",
+            "balloonText": "$[[value]]",
             "bullet": "round",
             "bulletBorderAlpha": 1,
             "bulletColor": "#FFFFFF",
@@ -409,7 +434,7 @@
             "minorGridEnabled": true
         },
         "export": {
-            "enabled": true
+            "enabled": false
         }
     });
 
@@ -427,26 +452,29 @@
     // generate some random data, quite different range
     function generateChartData() {
         var chartData = [];
-        chartData.push(
-            {
-            date: '2018-04-07',
-            visits: 1200
-            },
-            {
-                date: '2018-04-08',
-                visits: 1600
-            },
-            {
-                date: '2018-04-09',
-                visits: 1000
-            },
-            {
-                date: '2018-04-10',
-                visits: 500
-            }
+        <?php
+
+        $data = json_decode(file_get_contents("https://graphs2.coinmarketcap.com/currencies/bitcoin/"))->price_usd;
+        function gettimeof($in){
+            date_default_timezone_set("UTC");
+            $timestamp = $in / 1000;
+            $format = 'Y-m-d';
+            $res = date($format,$timestamp);
+            return $res;
+        }
+        foreach ($data as $json){
+            ?>
+        chartData.push({
+            date: '<?php echo gettimeof($json[0]); ?>',
+            visits: <?php  echo $json[1];?>
+        });
+        <?php
+        }
+
+        ?>
 
 
-        );
+
         return chartData;
     }
 
