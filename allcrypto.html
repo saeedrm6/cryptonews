@@ -52,28 +52,28 @@
                     <div class="col-md-3">
                         <span class="gold">BTC</span><br>
                         <span>
-                            <span id="BTCprice"></span><span class="pull-left">تومان</span>
+                            <span id="BTCprice"></span><span class="pull-left">$</span>
                         </span><br>
                         <strong class="uptextt" id="BTCchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">ETH</span><br>
                         <span>
-                            <span id="ETHprice"></span><span class="pull-left">تومان</span>
+                            <span id="ETHprice"></span><span class="pull-left">$</span>
                         </span><br>
                         <strong class="uptextt" id="ETHchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">LTC</span><br>
                         <span>
-                            <span id="LTCprice"></span><span class="pull-left">تومان</span>
+                            <span id="LTCprice"></span><span class="pull-left">$</span>
                         </span><br>
                         <strong class="uptextt" id="LTCchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">XRP</span><br>
                         <span>
-                            <span id="XRPprice"></span><span class="pull-left">تومان</span>
+                            <span id="XRPprice"></span><span class="pull-left">$</span>
                         </span><br>
                         <strong class="uptextt" id="XRPchanges">+1.77%</strong>
                     </div>
@@ -377,7 +377,7 @@
             if (this.readyState == 4 && this.status == 200) {
                 var data = JSON.parse(this.responseText);
 
-                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("BTCprice").innerHTML = data.RAW.BTC.USD.PRICE.replace(".0","");
                 document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
                 if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("BTCchanges").classList.add('downprice');
@@ -385,7 +385,7 @@
                     document.getElementById("BTCchanges").classList.add('uptext');
                 }
 
-                document.getElementById("ETHprice").innerHTML = format(data.RAW.ETH.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("ETHprice").innerHTML = data.RAW.ETH.USD.PRICE.replace(".0","");
                 document.getElementById("ETHchanges").innerHTML = data.RAW.ETH.USD.CHANGEPCT24HOUR;
                 if (data.RAW.ETH.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("ETHchanges").classList.add('downprice');
@@ -393,7 +393,7 @@
                     document.getElementById("ETHchanges").classList.add('uptext');
                 }
 
-                document.getElementById("LTCprice").innerHTML = format(data.RAW.LTC.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("LTCprice").innerHTML = data.RAW.LTC.USD.PRICE.replace(".0","");
                 document.getElementById("LTCchanges").innerHTML = data.RAW.LTC.USD.CHANGEPCT24HOUR;
                 if (data.RAW.LTC.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("LTCchanges").classList.add('downprice');
@@ -401,7 +401,7 @@
                     document.getElementById("LTCchanges").classList.add('uptext');
                 }
 
-                document.getElementById("XRPprice").innerHTML = format(data.RAW.XRP.USD.PRICE*6900,"").replace(".0","");
+                document.getElementById("XRPprice").innerHTML = data.RAW.XRP.USD.PRICE.replace(".0","");
                 document.getElementById("XRPchanges").innerHTML = data.RAW.XRP.USD.CHANGEPCT24HOUR;
                 if (data.RAW.XRP.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("XRPchanges").classList.add('downprice');
@@ -488,7 +488,7 @@
                 for (var i=0; i<48; i++){
                     var html = '<img style="border: 1px solid;" class="img-responsive" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/'+data[i]["id"]+'.png">';
                     document.getElementById("price"+i).innerHTML = html;
-                    document.getElementById("symb"+i).innerHTML = '<span style="display: inline;">'+data[i]["name"]+'</span>'+' <img class="img-responsive" style="display: inline-block;" src="https://s2.coinmarketcap.com/static/img/coins/16x16/'+data[i]["id"]+'.png" >';
+                    document.getElementById("symb"+i).innerHTML = '<a href="detail.php?symbol='+data[i]["name"].replace(" ","-")+'&id='+data[i]["id"]+'"><span style="display: inline;">'+data[i]["name"]+'</span>'+' <img class="img-responsive" style="display: inline-block;" src="https://s2.coinmarketcap.com/static/img/coins/16x16/'+data[i]["id"]+'.png" ></a>';
 //                    console.log(data[i]["id"]);
                 }
             }
@@ -499,8 +499,10 @@
     }
 
     function tete() {
+
         $(document).ready(function(){
             $.getJSON('https://cdn.api.coinranking.com/v1/public/coin/3460/?base=USD', function(data) {
+                console.log(data);
                 document.getElementById("symb49").innerHTML= '<span style="display: inline;">'+data["data"]["coin"]["name"]+'</span>'+' <img class="img-responsive" style="display: inline-block;" src="https://s2.coinmarketcap.com/static/img/coins/16x16/2571.png" >';
                 document.getElementById("marketcap49").innerHTML= format(data["data"]["coin"]["marketCap"],"دلار");
                 document.getElementById("price49").innerHTML = data["data"]["coin"]["price"] + ' دلار';

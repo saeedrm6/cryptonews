@@ -12,9 +12,8 @@
     <link href="https://cdn.anychart.com/releases/8.2.1/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.anychart.com/releases/8.2.1/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
     <style>
-        #chartdiv {
-            width	: 100%;
-            height	: 500px;
+        #frame .buy{
+            display: none;
         }
     </style>
 </head>
@@ -60,28 +59,28 @@
                     <div class="col-md-3">
                         <span class="gold">BTC</span><br>
                         <span>
-                            <span id="BTCprice"></span><span class="pull-left">$</span>
+                            <span id="BTCprice"></span><span class="pull-left">تومان</span>
                         </span><br>
                         <strong class="uptextt" id="BTCchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">ETH</span><br>
                         <span>
-                            <span id="ETHprice"></span><span class="pull-left">$</span>
+                            <span id="ETHprice"></span><span class="pull-left">تومان</span>
                         </span><br>
                         <strong class="uptextt" id="ETHchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">LTC</span><br>
                         <span>
-                            <span id="LTCprice"></span><span class="pull-left">$</span>
+                            <span id="LTCprice"></span><span class="pull-left">تومان</span>
                         </span><br>
                         <strong class="uptextt" id="LTCchanges">+1.77%</strong>
                     </div>
                     <div class="col-md-3">
                         <span class="gold">XRP</span><br>
                         <span>
-                            <span id="XRPprice"></span><span class="pull-left">$</span>
+                            <span id="XRPprice"></span><span class="pull-left">تومان</span>
                         </span><br>
                         <strong class="uptextt" id="XRPchanges">+1.77%</strong>
                     </div>
@@ -151,50 +150,30 @@
 
 </header>
 <div class="clearfix"></div>
-<section class="showdetail">
-    <script>
-
-
-        function timeConverter(UNIX_timestamp){
-            var a = new Date(UNIX_timestamp);
-            var year = a.getFullYear();
-            var month = a.getMonth();
-            var date = a.getDate();
-            var hour = a.getHours();
-            var min = a.getMinutes();
-            var sec = a.getSeconds();
-            var time = year + '-'+ date + '-' + month;
-            return time;
-        }
-
-//        console.log(timeConverter(1367174841000));
-    </script>
+<section id="changes">
     <div class="container">
-        <div class="jeg_author_wrap vcard">
-            <div class="jeg_author_content rtl innersymbdetail">
-                <?php
-                $info = json_decode(file_get_contents("https://api.coinmarketcap.com/v2/ticker/".$_GET["id"]))->data;
-                ?>
-                <div class="col-md-12 rtl">
-                    <div class="col-md-4">
-                        <h4>حجم معاملات 24 ساعت اخیر : <?php echo number_format($info->quotes->USD->volume_24h)." $ ";?></h4>
+        <div class="calculaty">
+            <div class="calctop firstop">
+                <div class="bigboxmain">
+                    <div class="boxmainz">
+                        <input type="number" value="1">
+                        <br>
+                        <a href="#" class="selectss"><span>BTC</span><i class="angles"></i></a>
                     </div>
-                    <div class="col-md-3">
-                        <h4>	عرضه شده : <?php echo $info->symbol." ".number_format($info->circulating_supply);?></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h4>قیمت : <?php echo number_format($info->quotes->USD->price)." $ ";?></h4>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>ارزش بازار : <?php echo number_format($info->quotes->USD->market_cap)." $ ";?></h4>
-                    </div>
-                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
+            </div>
+            <div class="replacers"><b></b></div>
+            <div class="calctop firstop">
+                <div class="bigboxmain">
+                    <div class="boxmainz">
+                        <input type="number" value="1">
+                        <br>
+                        <a href="#" class="selectss"><span>BTC</span><i class="angles"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="chartdiv"></div>
 </section>
 <footer class="saeedfooter">
     <div class="footer-holder" id="footer" data-id="footer">
@@ -339,7 +318,7 @@
                 console.log(data.RAW.BTC.USD.CHANGEPCT24HOUR);
 
 //                console.log(format(data.RAW.BTC.USD.PRICE*6900,"تومان").replace(".0",""));
-                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE,"").replace(".0","");
+                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
                 document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
                 if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("BTCchanges").classList.add('text-danger');
@@ -360,7 +339,7 @@
             if (this.readyState == 4 && this.status == 200) {
                 var data = JSON.parse(this.responseText);
 
-                document.getElementById("BTCprice").innerHTML = data.RAW.BTC.USD.PRICE.replace(".0","");
+                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
                 document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
                 if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("BTCchanges").classList.add('downprice');
@@ -368,7 +347,7 @@
                     document.getElementById("BTCchanges").classList.add('uptext');
                 }
 
-                document.getElementById("ETHprice").innerHTML = data.RAW.ETH.USD.PRICE.replace(".0","");
+                document.getElementById("ETHprice").innerHTML = format(data.RAW.ETH.USD.PRICE*6900,"").replace(".0","");
                 document.getElementById("ETHchanges").innerHTML = data.RAW.ETH.USD.CHANGEPCT24HOUR;
                 if (data.RAW.ETH.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("ETHchanges").classList.add('downprice');
@@ -376,7 +355,7 @@
                     document.getElementById("ETHchanges").classList.add('uptext');
                 }
 
-                document.getElementById("LTCprice").innerHTML = data.RAW.LTC.USD.PRICE.replace(".0","");
+                document.getElementById("LTCprice").innerHTML = format(data.RAW.LTC.USD.PRICE*6900,"").replace(".0","");
                 document.getElementById("LTCchanges").innerHTML = data.RAW.LTC.USD.CHANGEPCT24HOUR;
                 if (data.RAW.LTC.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("LTCchanges").classList.add('downprice');
@@ -384,7 +363,7 @@
                     document.getElementById("LTCchanges").classList.add('uptext');
                 }
 
-                document.getElementById("XRPprice").innerHTML = data.RAW.XRP.USD.PRICE.replace(".0","");
+                document.getElementById("XRPprice").innerHTML = format(data.RAW.XRP.USD.PRICE*6900,"").replace(".0","");
                 document.getElementById("XRPchanges").innerHTML = data.RAW.XRP.USD.CHANGEPCT24HOUR;
                 if (data.RAW.XRP.USD.CHANGEPCT24HOUR<0){
                     document.getElementById("XRPchanges").classList.add('downprice');
@@ -400,103 +379,6 @@
 
 </script>
 
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
-
-<script>
-    var chartData = generateChartData();
-    var chart = AmCharts.makeChart("chartdiv", {
-        "type": "serial",
-        "theme": "dark",
-        "marginRight": 80,
-        "autoMarginOffset": 20,
-        "marginTop": 7,
-        "dataProvider": chartData,
-        "valueAxes": [{
-            "axisAlpha": 0.2,
-            "dashLength": 1,
-            "position": "left"
-        }],
-        "mouseWheelZoomEnabled": true,
-        "graphs": [{
-            "id": "g1",
-            "balloonText": "$[[value]]",
-            "bullet": "round",
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "hideBulletsCount": 50,
-            "title": "red line",
-            "valueField": "visits",
-            "useLineColorForBulletBorder": true,
-            "balloon":{
-                "drop":true
-            }
-        }],
-        "chartScrollbar": {
-            "autoGridCount": true,
-            "graph": "g1",
-            "scrollbarHeight": 40
-        },
-        "chartCursor": {
-            "limitToGraph":"g1"
-        },
-        "categoryField": "date",
-        "categoryAxis": {
-            "parseDates": true,
-            "axisColor": "#DADADA",
-            "dashLength": 1,
-            "minorGridEnabled": true
-        },
-        "export": {
-            "enabled": false
-        }
-    });
-
-    chart.addListener("rendered", zoomChart);
-    zoomChart();
-
-    // this method is called when chart is first inited as we listen for "rendered" event
-    function zoomChart() {
-        // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
-        chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
-    }
-
-    // generate some random data, quite different range
-
-    // generate some random data, quite different range
-    function generateChartData() {
-        var chartData = [];
-        <?php
-
-        $data = json_decode(file_get_contents("https://graphs2.coinmarketcap.com/currencies/".str_replace(' ','-',$_GET["symbol"])))->price_usd;
-        function gettimeof($in){
-            date_default_timezone_set("UTC");
-            $timestamp = $in / 1000;
-            $format = 'Y-m-d';
-            $res = date($format,$timestamp);
-            return $res;
-        }
-        foreach ($data as $json){
-            ?>
-        chartData.push({
-            date: '<?php echo gettimeof($json[0]); ?>',
-            visits: <?php  echo $json[1];?>
-        });
-        <?php
-        }
-
-        ?>
-
-
-
-        return chartData;
-    }
-
-
-</script>
 
 </body>
 </html>
