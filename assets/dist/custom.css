@@ -318,3 +318,144 @@ header .navbar-default .navbar-nav > li > a{
 .select2-container--classic .select2-selection--single:focus {
     border: none !important;
 }
+
+.navbar-default .navbar-nav li a:hover{
+	color: #f5f5f5;
+    background-color: #0094bb;
+}
+.nEvent.fullist {
+    /* width: 31.33333%; */
+    background: #3b88ae;
+    margin: 1%;
+    padding: 12px 0;
+    border: 0;
+    padding-top: 0;
+    color: #fff;
+}
+.nEvent {
+    float: right;
+    width: 100%;
+    border-bottom: 1px #eee solid;
+    padding: 6px 8px;
+    position: relative;
+}
+.nEvent h3.title {
+    float: right;
+    width: 100%;
+    /* margin: 0; */
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 0;
+    background: #00000033;
+    color: #fff;
+    margin-bottom: 17px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 15px;
+}
+.nEvent.fullist h3.title:before {
+    content: '';
+    background: #304752;
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    transform: skewX(0deg) skewY(3deg);
+    z-index: 100;
+}
+.nEvent.fullist h3.title span {
+    position: relative;
+    z-index: 200;
+    font-weight: bold;
+}
+.nEvent.fullist h3.title span {
+    position: relative;
+    z-index: 200;
+    font-weight: bold;
+}
+.nEvent .date {
+    float: right;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+.nEvent .rest {
+    padding-left: 10px;
+    border-left: 1px #ccc solid;
+}
+.nEvent .dateOnly {
+    padding-right: 5px;
+}
+.nEvent .buttons {
+    position: relative;
+    left: -50%;
+    text-align: center;
+}
+.nEvent .buttons a {
+    background: #cff2f3;
+    margin: 1%;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 12px;
+    padding: 4px 13px 2px 13px;
+    position: relative;
+    left: 50%;
+    color: #323232;
+    text-decoration: none !important;
+}
+.probability h6 {
+    color: #fff;
+    float: right;
+    width: 100%;
+    background: transparent;
+    margin: 0;
+    padding-right: 13px;
+    line-height: 29px;
+    padding-top: 15px;
+    text-align: right;
+}
+.probability p {
+    float: right;
+    width: 100%;
+    position: relative;
+    height: 5px;
+    background: #00000014;
+    margin-bottom: 20px !important;
+}
+.probability p b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #00000045;
+}
+.probability p b span {
+    position: absolute;
+    right: -11px;
+    top: 11px;
+    background: #00000073;
+    border-radius: 34px;
+    padding: 1px 4px 1px 4px;
+    font-size: 9px;
+    font-weight: normal;
+    line-height: 15px;
+    font-family: tahoma;
+    color: #ffffff87;
+}
+.probability p b span:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 5px dashed #00000073;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    bottom: 17px;
+    left: 7px;
+}
