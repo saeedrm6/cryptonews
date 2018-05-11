@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e5f05fb-389a-4c7a-ace6-445b28bd6de5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/change.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/example.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/allcrypto.html" afterPath="$PROJECT_DIR$/allcrypto.html" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/custom.css" afterPath="$PROJECT_DIR$/assets/dist/custom.css" />
-      <change beforePath="$PROJECT_DIR$/detail.php" afterPath="$PROJECT_DIR$/detail.php" />
+      <change beforePath="$PROJECT_DIR$/change.html" afterPath="$PROJECT_DIR$/change.html" />
     </list>
     <ignored path="crypto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,24 +22,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="426" column="21" lean-forward="false" selection-start-line="426" selection-start-column="21" selection-end-line="426" selection-end-column="21" />
+            <state relative-caret-position="414">
+              <caret line="434" column="27" lean-forward="true" selection-start-line="434" selection-start-column="27" selection-end-line="434" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="change.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/change.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="164" column="48" lean-forward="false" selection-start-line="164" selection-start-column="48" selection-end-line="164" selection-end-column="48" />
+            <state relative-caret-position="432">
+              <caret line="181" column="36" lean-forward="false" selection-start-line="181" selection-start-column="36" selection-end-line="185" selection-end-column="41" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -135,8 +129,8 @@
         <option value="$PROJECT_DIR$/allcrypto.html" />
         <option value="$PROJECT_DIR$/detail.php" />
         <option value="$PROJECT_DIR$/example.php" />
-        <option value="$PROJECT_DIR$/change.html" />
         <option value="$PROJECT_DIR$/assets/dist/custom.css" />
+        <option value="$PROJECT_DIR$/change.html" />
       </list>
     </option>
   </component>
@@ -290,12 +284,12 @@
       <workItem from="1525761346992" duration="5389000" />
       <workItem from="1525841327017" duration="6587000" />
       <workItem from="1525948475680" duration="7339000" />
-      <workItem from="1525974529103" duration="3961000" />
+      <workItem from="1525974529103" duration="5839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70169000" />
+    <option name="totallyTimeSpent" value="72047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="25" width="1557" height="875" extended-state="6" />
@@ -787,18 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/change.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="164" column="48" lean-forward="false" selection-start-line="164" selection-start-column="48" selection-end-line="164" selection-end-column="48" />
-          <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/allcrypto.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -832,9 +814,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="426" column="21" lean-forward="false" selection-start-line="426" selection-start-column="21" selection-end-line="426" selection-end-column="21" />
+        <state relative-caret-position="414">
+          <caret line="434" column="27" lean-forward="true" selection-start-line="434" selection-start-column="27" selection-end-line="434" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/change.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="181" column="36" lean-forward="false" selection-start-line="181" selection-start-column="36" selection-end-line="185" selection-end-column="41" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

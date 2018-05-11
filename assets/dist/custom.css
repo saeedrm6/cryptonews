@@ -272,7 +272,7 @@ header .navbar-default .navbar-nav > li > a{
 }
 .calctop .boxmainz a {
 	float: right;
-	width: 35%;
+	width: 38%;
 	border-left: 1px #ccc solid;
 	font-size: 35px;
 	text-decoration: none;
@@ -308,4 +308,13 @@ header .navbar-default .navbar-nav > li > a{
 	display: block;
 	margin: 20px auto;
 	cursor: pointer;
+}
+.select2-container--default .select2-selection--single{
+	border: none !important;
+}
+.select2-container{
+	width:165px !important;
+}
+.select2-container--classic .select2-selection--single:focus {
+    border: none !important;
 }

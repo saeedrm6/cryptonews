@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/dist/custom.css">
     <link href="https://cdn.anychart.com/releases/8.2.1/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" type="text/css">
     <link href="https://cdn.anychart.com/releases/8.2.1/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
     <style>
         #frame .buy{
@@ -156,22 +157,116 @@
             <div class="calctop firstop">
                 <div class="bigboxmain">
                     <div class="boxmainz">
-                        <input type="number" value="1">
+                        <input type="number" value="1" id="fnum" onchange="getresult()">
                         <br>
-                        <a href="#" class="selectss"><span>BTC</span><i class="angles"></i></a>
+                        <a href="#" class="selectss"><span>
+                            <select onchange="getresult()" id="fsymbol" class="js-example-templating js-states form-control">
+                                <option value="USD">US Dollor (USD)</option>
+                                <option value="BTC" selected="selected">Bitcoin (BTC)</option>
+                                <option value="ETH">Ethereum (ETH)</option>
+                                <option value="XRP">Ripple (XRP)</option>
+                                <option value="BCH">Bitcoin Cash (BCH)</option>
+                                <option value="EOS">EOS (EOS)</option>
+                                <option value="LTC">Litecoin (LTC)</option>
+                                <option value="ADA">ADA (ADA)</option>
+                                <option value="XLM">Stellar (XLM)</option>
+                                <option value="IOT">IOT (IOT)</option>
+                                <option value="TRX">TRX (TRX)</option>
+                                <option value="NEO">NEO (NEO)</option>
+                                <option value="XMR">Monero (XMR)</option>
+                                <option value="DASH">Dash (DASH)</option>
+                                <option value="XEM">NEM (XEM)</option>
+                                <option value="VEN">VEN (VEN)</option>
+                                <option value="BCN">Bytecoin (BCN)</option>
+                                <option value="ETC">Ethereum Classic (ETC)</option>
+                                <option value="QTUM">QTUM (QTUM)</option>
+                                <option value="BNBX">BNBX (BNBX)</option>
+                                <option value="OMG">OMG (OMG)</option>
+                                <option value="ICX">ICX (ICX)</option>
+                                <option value="LSK">Lisk (LSK)</option>
+                                <option value="BTG">Bitcoin Gold (BTG)</option>
+                                <option value="XVG">Verge (XVG)</option>
+                                <option value="AET">AET (AET)</option>
+                                <option value="ZRX">ZRX (ZRX)</option>
+                                <option value="ZEC">Zcash (ZEC)</option>
+                                <option value="ONT">ONT (ONT)</option>
+                                <option value="STEEM">Steem (STEEM)</option>
+                                <option value="SC">Siacoin (SC)</option>
+                                <option value="BTM">Bitmark (BTM)</option>
+                                <option value="BTS">BitShares (BTS)</option>
+                                <option value="BCD">BCD (BCD)</option>
+                                <option value="MKR">MKR (MKR)</option>
+                                <option value="PPT">PPT (PPT)</option>
+                                <option value="WAVES">WAVES (WAVES)</option>
+                                <option value="STRAT">STRAT (STRAT)</option>
+                                <option value="DCR">Decred (DCR)</option>
+                                <option value="GNT">Golem (GNT)</option>
+                                <option value="DOGE">Dogecoin (DOGE)</option>
+                                <option value="REP">Augur (REP)</option>
+                
+                            </select>
+                        </span></a>
                     </div>
                 </div>
             </div>
-            <div class="replacers"><b></b></div>
+            <div class="replacers"><b onclick="changesymb()"></b></div>
             <div class="calctop firstop">
                 <div class="bigboxmain">
                     <div class="boxmainz">
-                        <input type="number" value="1">
+                        <input type="text" value="1" id="resultofcache" disabled>
                         <br>
-                        <a href="#" class="selectss"><span>BTC</span><i class="angles"></i></a>
+                        <a href="#" class="selectss">
+                            <span>
+                                <select onchange="getresult()" id="ssymbol" class="js-example-templating js-states form-control">
+                                <option value="USD" selected="selected">US Dollor (USD)</option>
+                                <option value="BTC">Bitcoin (BTC)</option>
+                                <option value="ETH">Ethereum (ETH)</option>
+                                <option value="XRP">Ripple (XRP)</option>
+                                <option value="BCH">Bitcoin Cash (BCH)</option>
+                                <option value="EOS">EOS (EOS)</option>
+                                <option value="LTC">Litecoin (LTC)</option>
+                                <option value="ADA">ADA (ADA)</option>
+                                <option value="XLM">Stellar (XLM)</option>
+                                <option value="IOT">IOT (IOT)</option>
+                                <option value="TRX">TRX (TRX)</option>
+                                <option value="NEO">NEO (NEO)</option>
+                                <option value="XMR">Monero (XMR)</option>
+                                <option value="DASH">Dash (DASH)</option>
+                                <option value="XEM">NEM (XEM)</option>
+                                <option value="VEN">VEN (VEN)</option>
+                                <option value="BCN">Bytecoin (BCN)</option>
+                                <option value="ETC">Ethereum Classic (ETC)</option>
+                                <option value="QTUM">QTUM (QTUM)</option>
+                                <option value="BNBX">BNBX (BNBX)</option>
+                                <option value="OMG">OMG (OMG)</option>
+                                <option value="ICX">ICX (ICX)</option>
+                                <option value="LSK">Lisk (LSK)</option>
+                                <option value="BTG">Bitcoin Gold (BTG)</option>
+                                <option value="XVG">Verge (XVG)</option>
+                                <option value="AET">AET (AET)</option>
+                                <option value="ZRX">ZRX (ZRX)</option>
+                                <option value="ZEC">Zcash (ZEC)</option>
+                                <option value="ONT">ONT (ONT)</option>
+                                <option value="STEEM">Steem (STEEM)</option>
+                                <option value="SC">Siacoin (SC)</option>
+                                <option value="BTM">Bitmark (BTM)</option>
+                                <option value="BTS">BitShares (BTS)</option>
+                                <option value="BCD">BCD (BCD)</option>
+                                <option value="MKR">MKR (MKR)</option>
+                                <option value="PPT">PPT (PPT)</option>
+                                <option value="WAVES">WAVES (WAVES)</option>
+                                <option value="STRAT">STRAT (STRAT)</option>
+                                <option value="DCR">Decred (DCR)</option>
+                                <option value="GNT">Golem (GNT)</option>
+                                <option value="DOGE">Dogecoin (DOGE)</option>
+                                <option value="REP">Augur (REP)</option>
+                            </select>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -301,6 +396,33 @@
 <script src="assets/js/bootstrap.js"></script>
 <script type="text/script" src="assets/dist/frontend.min.js"></script>
 <script type="text/script" src="assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+
+<script>
+    function formatState (state) {
+        // if (!state.id) {
+        //     return state.text;
+        // }
+        // var baseUrl = "/user/pages/images/flags";
+        // var $state = $(
+        //     '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+        // );
+        // return $state;
+
+        var $state = $(
+            '<span>' + state.text + '</span>'
+        );
+
+        return $state;
+    };
+
+    $(".js-example-templating").select2({
+        templateResult: formatState
+    });
+</script>
+
+
+
 
 <script>
 
@@ -379,6 +501,51 @@
 
 </script>
 
+<script>
+    function getresult(){
+        var input = document.getElementById("fnum").value;
+        var symb1 = document.getElementById("fsymbol").value;
+        var symb2 = document.getElementById("ssymbol").value;
+        var json = new XMLHttpRequest();
+        json.onreadystatechange = function() {
+            if (this.readyState == 2) {
+                document.getElementById("resultofcache").value = "loading...";
+            }
+            else if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("resultofcache").value = this.responseText;
+            }
+        };
+        json.open("GET", "http://localhost:8080/cryptonews/changeapi.php?num1="+input+"&symb1="+symb1+"&symb2="+symb2, true);
+        json.send();
+        
+    }
 
+    function changesymb(){
+        var input = document.getElementById("fnum").value;
+        var tmp = document.getElementById("fsymbol").options[document.getElementById("fsymbol").selectedIndex];
+        document.getElementById("fsymbol").options[document.getElementById("fsymbol").selectedIndex] = document.getElementById("ssymbol").options[document.getElementById("ssymbol").selectedIndex];
+        document.getElementById("ssymbol").options[document.getElementById("ssymbol").selectedIndex]= tmp;      
+        var symb1 = document.getElementById("fsymbol").value;
+        var symb2 = document.getElementById("ssymbol").value;
+        var json = new XMLHttpRequest();
+        json.onreadystatechange = function() {
+                    if (this.readyState == 2) {
+                        document.getElementById("resultofcache").value = "loading...";
+                    }
+                    else if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("resultofcache").value = this.responseText;
+                    }
+                };  
+        json.open("GET", "http://localhost:8080/cryptonews/changeapi.php?num1="+input+"&symb1="+symb1+"&symb2="+symb2, true);
+        json.send();
+    }
+
+
+    $(document).ready(function(){
+        getresult();
+    });
+
+
+</script>
 </body>
 </html>
