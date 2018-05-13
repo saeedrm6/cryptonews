@@ -161,6 +161,7 @@
                         <br>
                         <a href="#" class="selectss"><span>
                             <select onchange="getresult()" id="fsymbol" class="js-example-templating js-states form-control">
+                                <option value="IRR">IR Rial (IRR)</option>
                                 <option value="USD">US Dollor (USD)</option>
                                 <option value="BTC" selected="selected">Bitcoin (BTC)</option>
                                 <option value="ETH">Ethereum (ETH)</option>
@@ -218,6 +219,7 @@
                         <a href="#" class="selectss">
                             <span>
                                 <select onchange="getresult()" id="ssymbol" class="js-example-templating js-states form-control">
+                                <option value="IRR">IR Rial (IRR)</option>
                                 <option value="USD" selected="selected">US Dollor (USD)</option>
                                 <option value="BTC">Bitcoin (BTC)</option>
                                 <option value="ETH">Ethereum (ETH)</option>
@@ -455,48 +457,48 @@
 
 
 
-    window.setInterval(function(){
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var data = JSON.parse(this.responseText);
+    // window.setInterval(function(){
+    //     var xhttp = new XMLHttpRequest();
+    //     xhttp.onreadystatechange = function() {
+    //         if (this.readyState == 4 && this.status == 200) {
+    //             var data = JSON.parse(this.responseText);
 
-                document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
-                document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
-                if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
-                    document.getElementById("BTCchanges").classList.add('downprice');
-                }else{
-                    document.getElementById("BTCchanges").classList.add('uptext');
-                }
+    //             document.getElementById("BTCprice").innerHTML = format(data.RAW.BTC.USD.PRICE*6900,"").replace(".0","");
+    //             document.getElementById("BTCchanges").innerHTML = data.RAW.BTC.USD.CHANGEPCT24HOUR;
+    //             if (data.RAW.BTC.USD.CHANGEPCT24HOUR<0){
+    //                 document.getElementById("BTCchanges").classList.add('downprice');
+    //             }else{
+    //                 document.getElementById("BTCchanges").classList.add('uptext');
+    //             }
 
-                document.getElementById("ETHprice").innerHTML = format(data.RAW.ETH.USD.PRICE*6900,"").replace(".0","");
-                document.getElementById("ETHchanges").innerHTML = data.RAW.ETH.USD.CHANGEPCT24HOUR;
-                if (data.RAW.ETH.USD.CHANGEPCT24HOUR<0){
-                    document.getElementById("ETHchanges").classList.add('downprice');
-                }else{
-                    document.getElementById("ETHchanges").classList.add('uptext');
-                }
+    //             document.getElementById("ETHprice").innerHTML = format(data.RAW.ETH.USD.PRICE*6900,"").replace(".0","");
+    //             document.getElementById("ETHchanges").innerHTML = data.RAW.ETH.USD.CHANGEPCT24HOUR;
+    //             if (data.RAW.ETH.USD.CHANGEPCT24HOUR<0){
+    //                 document.getElementById("ETHchanges").classList.add('downprice');
+    //             }else{
+    //                 document.getElementById("ETHchanges").classList.add('uptext');
+    //             }
 
-                document.getElementById("LTCprice").innerHTML = format(data.RAW.LTC.USD.PRICE*6900,"").replace(".0","");
-                document.getElementById("LTCchanges").innerHTML = data.RAW.LTC.USD.CHANGEPCT24HOUR;
-                if (data.RAW.LTC.USD.CHANGEPCT24HOUR<0){
-                    document.getElementById("LTCchanges").classList.add('downprice');
-                }else{
-                    document.getElementById("LTCchanges").classList.add('uptext');
-                }
+    //             document.getElementById("LTCprice").innerHTML = format(data.RAW.LTC.USD.PRICE*6900,"").replace(".0","");
+    //             document.getElementById("LTCchanges").innerHTML = data.RAW.LTC.USD.CHANGEPCT24HOUR;
+    //             if (data.RAW.LTC.USD.CHANGEPCT24HOUR<0){
+    //                 document.getElementById("LTCchanges").classList.add('downprice');
+    //             }else{
+    //                 document.getElementById("LTCchanges").classList.add('uptext');
+    //             }
 
-                document.getElementById("XRPprice").innerHTML = format(data.RAW.XRP.USD.PRICE*6900,"").replace(".0","");
-                document.getElementById("XRPchanges").innerHTML = data.RAW.XRP.USD.CHANGEPCT24HOUR;
-                if (data.RAW.XRP.USD.CHANGEPCT24HOUR<0){
-                    document.getElementById("XRPchanges").classList.add('downprice');
-                }else{
-                    document.getElementById("XRPchanges").classList.add('uptext');
-                }
-            }
-        };
-        xhttp.open("GET", "https://api.cointrend.club/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP&tsyms=USD", true);
-        xhttp.send();
-    }, 500);
+    //             document.getElementById("XRPprice").innerHTML = format(data.RAW.XRP.USD.PRICE*6900,"").replace(".0","");
+    //             document.getElementById("XRPchanges").innerHTML = data.RAW.XRP.USD.CHANGEPCT24HOUR;
+    //             if (data.RAW.XRP.USD.CHANGEPCT24HOUR<0){
+    //                 document.getElementById("XRPchanges").classList.add('downprice');
+    //             }else{
+    //                 document.getElementById("XRPchanges").classList.add('uptext');
+    //             }
+    //         }
+    //     };
+    //     xhttp.open("GET", "https://api.cointrend.club/data/pricemultifull?fsyms=BTC,ETH,LTC,XRP&tsyms=USD", true);
+    //     xhttp.send();
+    // }, 500);
 
 
 </script>
@@ -515,7 +517,7 @@
                 document.getElementById("resultofcache").value = this.responseText;
             }
         };
-        json.open("GET", "https://rahimimanesh.com/demo3/changeapi.php?num1="+input+"&symb1="+symb1+"&symb2="+symb2, true);
+        json.open("GET", "http://localhost:8080/cryptonews/changeapi.php?num1="+input+"&symb1="+symb1+"&symb2="+symb2, true);
         json.send();
         
     }
@@ -536,7 +538,7 @@
                         document.getElementById("resultofcache").value = this.responseText;
                     }
                 };  
-        json.open("GET", "https://rahimimanesh.com/demo3/changeapi.php?num1="+input+"&symb1="+symb1+"&symb2="+symb2, true);
+        json.open("GET", "http://localhost:8080/cryptonews/changeapi.php?num1="+input+"&symb1="+symb1+"&symb2="+symb2, true);
         json.send();
     }
 
