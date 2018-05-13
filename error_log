@@ -1,0 +1,9 @@
+[12-May-2018 05:56:27 UTC] PHP Warning:  file_get_contents(): SSL: Handshake timed out in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 05:56:27 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 05:56:27 UTC] PHP Warning:  file_get_contents(https://api.cryptonator.com/api/ticker/BTC-USD): failed to open stream: operation failed in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 06:33:15 UTC] PHP Warning:  file_get_contents(): SSL: Handshake timed out in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 06:33:15 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 06:33:15 UTC] PHP Warning:  file_get_contents(https://api.cryptonator.com/api/ticker/BTC-USD): failed to open stream: operation failed in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 06:58:51 UTC] PHP Warning:  file_get_contents(): SSL: Handshake timed out in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 06:58:51 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in /home/rahimima/public_html/demo2/changeapi.php on line 6
+[12-May-2018 06:58:51 UTC] PHP Warning:  file_get_contents(https://api.cryptonator.com/api/ticker/BTC-USD): failed to open stream: operation failed in /home/rahimima/public_html/demo2/changeapi.php on line 6

@@ -33,7 +33,8 @@ a,a:hover{
 	color: #111;
 }
 .sazemanibg{
-	background: #0094bb !important;
+	/*background: #0094bb !important;*/
+	background: #00a473 !important;
 }
 .sazemanicolor{
 	color: #0094bb !important;
@@ -64,7 +65,7 @@ header .navbar-nav > li{
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
 	color: #f5f5f5;
-    background-color: #0094bb;
+    background-color: #cf8120;
 }
 header .navbar-default .navbar-nav > li > a{
 	color: #f5f5f5;
@@ -321,7 +322,7 @@ header .navbar-default .navbar-nav > li > a{
 
 .navbar-default .navbar-nav li a:hover{
 	color: #f5f5f5;
-    background-color: #0094bb;
+    background-color: #cf8120;
 }
 .nEvent.fullist {
     /* width: 31.33333%; */
